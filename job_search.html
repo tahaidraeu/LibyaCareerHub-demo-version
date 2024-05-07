@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('img/background.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgb(27, 31, 39);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: rgb(27, 31, 39);
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-icon {
+            font-size: 20px;
+            color: #c8bebe;
+            margin-right: 10px;
+        }
+
+        .search-input {
+            flex: 1;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            outline: none;
+            background-color: transparent;
+        }
+
+        .search-btn {
+            background-color: #FFA500;
+            color: #1b1f27;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-btn:hover {
+            background-color: #FFA500;
+        }
+
+        .advanced-options {
+            margin-top: 20px;
+        }
+
+        .advanced-toggle {
+            cursor: pointer;
+            color: #FFA500;
+        }
+
+        .advanced-options-content {
+            display: none;
+            padding: 20px;
+            background-color: rgb(27, 31, 39, 0.9%);
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px rgb(27, 31, 39);
+        }
+
+        .advanced-options-content.show {
+            display: block;
+        }
+
+        .textbox {
+            margin-bottom: 15px;
+        }
+
+        .textbox label {
+            font-weight: 500;
+            display: block;
+            margin-bottom: 5px;
+            color: #c8bebe;
+        }
+
+        .textbox input[type="text"],
+        .textbox input[type="email"],
+        .textbox select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #1b1f27;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="search-box">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Search for jobs" name="searchInput" class="search-input">
+        <button class="search-btn">Search</button>
+    </div>
+    <div class="advanced-options">
+        <span class="advanced-toggle" onclick="toggleAdvancedOptions()">Advanced Search</span>
+        <div class="advanced-options-content" id="advancedOptions">
+            <div class="textbox">
+                <label for="jobTitle">Job Title</label>
+                <input type="text" id="jobTitle" placeholder="Enter job title" name="jobTitle">
+            </div>
+            <div class="textbox">
+                <label for="location">Location</label>
+                <input type="text" id="location" placeholder="Enter location" name="location">
+            </div>
+            <div class="textbox">
+                <label for="jobType">Job Type</label>
+                <select id="jobType" name="jobType">
+                    <option value="fulltime">Full-time</option>
+                    <option value="parttime">Part-time</option>
+                    <option value="contract">Contract</option>
+                    <option value="freelance">Freelance</option>
+                </select>
+            </div>
+            <!-- Add more filters as needed -->
+        </div>
+    </div>
+</div>
+<script>
+    function toggleAdvancedOptions() {
+        var options = document.getElementById("advancedOptions");
+        options.classList.toggle("show");
+    }
+</script>
+</body>
+</html>
+

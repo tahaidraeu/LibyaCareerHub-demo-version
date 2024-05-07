@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibyaCareerHub Login Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- تضمين مكتبة Captcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+<div class="container">
+    <div class="login-box">
+        <h1>LibyaCareer<span class="hub">Hub</span></h1>
+        <h2>Login</h2>
+        <form>
+            <div class="textbox">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username" name="username" required>
+            </div>
+            <div class="textbox">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" name="password" required>
+            </div>
+            <!-- عنصر التحقق Captcha -->
+            <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+            <input type="submit" class="btn" value="Sign In">
+        </form>
+        <a href="forgot_password.html">Forgot Password?</a>
+        <a href="create_account.html">Don't have an account?</a>
+    </div>
+</div>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="js/script.js"></script>
+</body>
+</html>
